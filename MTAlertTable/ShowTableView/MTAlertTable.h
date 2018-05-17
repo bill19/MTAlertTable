@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class MTAlertObj;
 
-typedef void (^AlertTableDidSelect) (MTAlertObj *obj);
+typedef void (^AlertTableDidSelect) (MTAlertObj *obj ,NSInteger index);
 
 @interface MTAlertTable : UIView
 
@@ -37,4 +37,5 @@ typedef void (^AlertTableDidSelect) (MTAlertObj *obj);
  隐藏alertview
  */
 - (void)tableHidden;
+
 @end

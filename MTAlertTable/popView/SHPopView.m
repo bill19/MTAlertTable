@@ -1,31 +1,37 @@
 //
-//  MTAlertTable.m
+//  SHPopView.m
 //  MTAlertTable
 //
-//  Created by HaoSun on 2018/5/15.
+//  Created by HaoSun on 2018/5/17.
 //  Copyright © 2018年 SHKIT. All rights reserved.
 //
 
-#import "MTAlertTable.h"
-#import "MTAlertCell.h"
-#import "MTAlertObj.h"
+#import "SHPopView.h"
+#import "SHPopCell.h"
+#import "SHDrawTriangle.h"
 #import "Masonry.h"
-@interface MTAlertTable () <UITableViewDelegate,UITableViewDataSource>
+
+static CGFloat const kTriangleH = 15.0f;
+
+@interface SHPopView () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UIView *maskView;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) NSArray <MTAlertObj *>*tableDataSource;
+@property (nonatomic,strong) NSArray <SHPopModel *>*tableDataSource;
+@property (nonatomic, strong) SHDrawTriangle *drawTriangleView;
 @end
 
-@implementation MTAlertTable
 
-- (instancetype)initWithTableDataSource:(NSArray <MTAlertObj *>*)tableDataSource {
+@implementation SHPopView
+
+
+- (instancetype)initWithTableDataSource:(NSArray <SHPopModel *>*)tableDataSource {
     self = [super initWithFrame:CGRectZero];
     if (self) {
         self.tableDataSource = tableDataSource;
         self.frame = [UIApplication sharedApplication].keyWindow.bounds;
         [self addSubview:self.maskView];
-        [self.tableView registerClass:[MTAlertCell class] forCellReuseIdentifier:@"MTAlertCell"];
+        [self.tableView registerClass:[SHPopCell class] forCellReuseIdentifier:@"SHPopCell"];
     }
     return self;
 }
@@ -44,8 +50,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MTAlertCell *cell = [MTAlertCell cellWithTableView:tableView];
-    cell.alertobj = [self modelForIndexPath:indexPath];
+    SHPopCell *cell = [SHPopCell cellWithTableView:tableView];
+    cell.popModel = [self modelForIndexPath:indexPath];
     return cell;
 
 }
@@ -60,7 +66,7 @@
 }
 
 #pragma mark - model handler
-- (MTAlertObj *)modelForIndexPath:(NSIndexPath *)indexPath {
+- (SHPopModel *)modelForIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row < self.tableDataSource.count) {
         return self.tableDataSource[indexPath.row];
     }
@@ -89,12 +95,9 @@
         tableView.bounces = NO;
         [self addSubview:tableView];
         _tableView = tableView;
-        [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.mas_left).offset(30.0f);
-            make.right.mas_equalTo(self.mas_right).offset(-30.0f);
-            make.height.mas_equalTo(self.tableDataSource.count * kMTAlertCellHeight);
-            make.centerX.mas_equalTo(self.mas_centerX);
-            make.centerY.mas_equalTo(self.mas_centerY);
+        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(120.0f);
+            make.height.mas_equalTo(self.tableDataSource.count * kPopCellHeight);
         }];
     }
     return _tableView;
@@ -102,32 +105,70 @@
 
 - (UIView *)maskView {
     if (!_maskView) {
-        CGFloat color = 10.0/255.0;
         _maskView = [[UIView alloc] initWithFrame:self.bounds];
-        _maskView.backgroundColor = [UIColor colorWithRed:color green:color blue:color alpha:.8];
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tableHidden)];
         [_maskView addGestureRecognizer:tapGesture];
     }
     return _maskView;
 }
 
-- (NSArray<MTAlertObj *> *)tableDataSource {
+- (NSArray<SHPopModel *> *)tableDataSource {
     if (!_tableDataSource) {
         _tableDataSource = [NSArray array];
     }
     return _tableDataSource;
 }
 
+/**
+画一个三角形
+ */
+- (void)drawView:(CGRect)rect {
+    CGPoint piont1;
+    piont1.x = 7.5;
+    piont1.y = 0;
+    CGPoint piont2;
+    piont2.x = 0;
+    piont2.y = 15;
+    CGPoint piont3;
+    piont3.x = 15;
+    piont3.y = 15;
+
+    SHDrawTriangle *drawTriangle = [[SHDrawTriangle alloc] initStartPoint:piont1 middlePoint:piont2 endPoint:piont3 color:[[self.tableDataSource firstObject] backgroundColor]];
+    drawTriangle.frame = rect;
+    [self addSubview:drawTriangle];
+    _drawTriangleView = drawTriangle;
+}
+
 #pragma mark  方法
 
-- (void)tableShow {
+- (void)tableShowCenter {
+    [_tableView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.mas_centerX);
+        make.centerY.mas_equalTo(self.mas_centerY);
+    }];
     [[UIApplication sharedApplication].keyWindow addSubview:self];
 }
 
+- (void)tableShowOnView:(UIView *)view {
+    CGRect ret = view.frame;
+    CGFloat rectx = ret.origin.x + ret.size.width * 0.5;
+    CGFloat recty = ret.origin.y + ret.size.height;
+    [self drawView:CGRectMake(rectx, recty, kTriangleH, kTriangleH)];
+
+    [_tableView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.drawTriangleView.mas_bottom);
+        make.centerX.mas_equalTo(self.drawTriangleView.mas_centerX);
+    }];
+    [[UIApplication sharedApplication].keyWindow addSubview:self];
+}
 
 - (void)tableHidden {
     [self removeFromSuperview];
 }
 
-@end
+- (void)setTriangleColor:(UIColor *)triangleColor {
+    _triangleColor = triangleColor;
+    
+}
 
+@end

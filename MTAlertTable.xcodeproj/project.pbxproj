@@ -15,6 +15,11 @@
 		6D7D06AE20AAE48D00C7C486 /* SHDigLogObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06AD20AAE48D00C7C486 /* SHDigLogObj.m */; };
 		6D7D06B120AAE4B600C7C486 /* SHDigLogConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06B020AAE4B600C7C486 /* SHDigLogConfig.m */; };
 		6D7D06B720AAE61D00C7C486 /* SHDiaLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06B620AAE61D00C7C486 /* SHDiaLogCell.m */; };
+		6D9FEC9320AD1BDD004A8416 /* SHPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9220AD1BDD004A8416 /* SHPopView.m */; };
+		6D9FEC9620AD1CB2004A8416 /* SHPopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9520AD1CB2004A8416 /* SHPopCell.m */; };
+		6D9FEC9920AD1CC5004A8416 /* SHPopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9820AD1CC5004A8416 /* SHPopModel.m */; };
+		6D9FEC9D20AD33A0004A8416 /* SHDrawTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9C20AD33A0004A8416 /* SHDrawTriangle.m */; };
+		6D9FEC9F20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9E20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png */; };
 		6DA691C720AAABC100341D11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691C620AAABC100341D11 /* AppDelegate.m */; };
 		6DA691CA20AAABC100341D11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691C920AAABC100341D11 /* ViewController.m */; };
 		6DA691CD20AAABC100341D11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA691CB20AAABC100341D11 /* Main.storyboard */; };
@@ -64,6 +69,15 @@
 		6D7D06B020AAE4B600C7C486 /* SHDigLogConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDigLogConfig.m; sourceTree = "<group>"; };
 		6D7D06B520AAE61D00C7C486 /* SHDiaLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDiaLogCell.h; sourceTree = "<group>"; };
 		6D7D06B620AAE61D00C7C486 /* SHDiaLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDiaLogCell.m; sourceTree = "<group>"; };
+		6D9FEC9120AD1BDD004A8416 /* SHPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPopView.h; sourceTree = "<group>"; };
+		6D9FEC9220AD1BDD004A8416 /* SHPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHPopView.m; sourceTree = "<group>"; };
+		6D9FEC9420AD1CB2004A8416 /* SHPopCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPopCell.h; sourceTree = "<group>"; };
+		6D9FEC9520AD1CB2004A8416 /* SHPopCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHPopCell.m; sourceTree = "<group>"; };
+		6D9FEC9720AD1CC5004A8416 /* SHPopModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPopModel.h; sourceTree = "<group>"; };
+		6D9FEC9820AD1CC5004A8416 /* SHPopModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHPopModel.m; sourceTree = "<group>"; };
+		6D9FEC9B20AD33A0004A8416 /* SHDrawTriangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDrawTriangle.h; sourceTree = "<group>"; };
+		6D9FEC9C20AD33A0004A8416 /* SHDrawTriangle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDrawTriangle.m; sourceTree = "<group>"; };
+		6D9FEC9E20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png"; sourceTree = "<group>"; };
 		6DA691C220AAABC100341D11 /* MTAlertTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTAlertTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA691C520AAABC100341D11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6DA691C620AAABC100341D11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +153,28 @@
 			path = DiaLog;
 			sourceTree = "<group>";
 		};
+		6D9FEC9020AD1BCA004A8416 /* popView */ = {
+			isa = PBXGroup;
+			children = (
+				6D9FEC9120AD1BDD004A8416 /* SHPopView.h */,
+				6D9FEC9220AD1BDD004A8416 /* SHPopView.m */,
+				6D9FEC9420AD1CB2004A8416 /* SHPopCell.h */,
+				6D9FEC9520AD1CB2004A8416 /* SHPopCell.m */,
+				6D9FEC9720AD1CC5004A8416 /* SHPopModel.h */,
+				6D9FEC9820AD1CC5004A8416 /* SHPopModel.m */,
+			);
+			path = popView;
+			sourceTree = "<group>";
+		};
+		6D9FEC9A20AD338D004A8416 /* DrawkTriangle */ = {
+			isa = PBXGroup;
+			children = (
+				6D9FEC9B20AD33A0004A8416 /* SHDrawTriangle.h */,
+				6D9FEC9C20AD33A0004A8416 /* SHDrawTriangle.m */,
+			);
+			path = DrawkTriangle;
+			sourceTree = "<group>";
+		};
 		6DA691B920AAABC100341D11 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +200,9 @@
 		6DA691C420AAABC100341D11 /* MTAlertTable */ = {
 			isa = PBXGroup;
 			children = (
+				6D9FEC9E20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png */,
+				6D9FEC9A20AD338D004A8416 /* DrawkTriangle */,
+				6D9FEC9020AD1BCA004A8416 /* popView */,
 				6D7D06A820AAE3D900C7C486 /* DiaLog */,
 				6DA691FA20AAABD500341D11 /* ShowTableView */,
 				6DA691C520AAABC100341D11 /* AppDelegate.h */,
@@ -324,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D9FEC9F20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png in Resources */,
 				6DA691D520AAABC200341D11 /* LaunchScreen.storyboard in Resources */,
 				6DA691D220AAABC200341D11 /* Assets.xcassets in Resources */,
 				6DA691CD20AAABC100341D11 /* Main.storyboard in Resources */,
@@ -374,15 +414,19 @@
 			files = (
 				6D7D06B720AAE61D00C7C486 /* SHDiaLogCell.m in Sources */,
 				6D7D06B120AAE4B600C7C486 /* SHDigLogConfig.m in Sources */,
+				6D9FEC9920AD1CC5004A8416 /* SHPopModel.m in Sources */,
 				6D7D06AB20AAE41700C7C486 /* SHDiaLog.m in Sources */,
 				6DA691D020AAABC100341D11 /* MTAlertTable.xcdatamodeld in Sources */,
 				6DA691CA20AAABC100341D11 /* ViewController.m in Sources */,
+				6D9FEC9D20AD33A0004A8416 /* SHDrawTriangle.m in Sources */,
 				6D23682920ABC438005452D4 /* SHDigTextCell.m in Sources */,
 				6DA691D820AAABC200341D11 /* main.m in Sources */,
 				6DA691C720AAABC100341D11 /* AppDelegate.m in Sources */,
 				6D7D06AE20AAE48D00C7C486 /* SHDigLogObj.m in Sources */,
 				6D23682F20ABC9F2005452D4 /* SHButtonConfig.m in Sources */,
+				6D9FEC9620AD1CB2004A8416 /* SHPopCell.m in Sources */,
 				6DA6920020AAAC0C00341D11 /* MTAlertTable.m in Sources */,
+				6D9FEC9320AD1BDD004A8416 /* SHPopView.m in Sources */,
 				6D7D06A420AAAD1D00C7C486 /* MTAlertObj.m in Sources */,
 				6D7D06A720AAAD3E00C7C486 /* MTAlertCell.m in Sources */,
 			);
