@@ -1,31 +1,33 @@
 //
-//  MTAlertTable.m
+//  SHDiaLog.m
 //  MTAlertTable
 //
 //  Created by HaoSun on 2018/5/15.
 //  Copyright © 2018年 SHKIT. All rights reserved.
 //
 
-#import "MTAlertTable.h"
-#import "MTAlertCell.h"
-#import "MTAlertObj.h"
+#import "SHDiaLog.h"
+#import "SHDiaLogCell.h"
+#import "SHDigLogObj.h"
 #import "Masonry.h"
-@interface MTAlertTable () <UITableViewDelegate,UITableViewDataSource>
+
+@interface SHDiaLog () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UIView *maskView;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) NSArray <MTAlertObj *>*tableDataSource;
+@property (nonatomic,strong) NSArray <SHDigLogObj *>*tableDataSource;
+
 @end
 
-@implementation MTAlertTable
+@implementation SHDiaLog
 
-- (instancetype)initWithTableDataSource:(NSArray <MTAlertObj *>*)tableDataSource {
+- (instancetype)initWithTableDataSource:(NSArray <SHDigLogObj *>*)tableDataSource {
     self = [super initWithFrame:CGRectZero];
     if (self) {
         self.tableDataSource = tableDataSource;
         self.frame = [UIApplication sharedApplication].keyWindow.bounds;
         [self addSubview:self.maskView];
-        [self.tableView registerClass:[MTAlertCell class] forCellReuseIdentifier:@"MTAlertCell"];
+        [self.tableView registerClass:[SHDiaLog class] forCellReuseIdentifier:@"SHDiaLog"];
     }
     return self;
 }
@@ -44,23 +46,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MTAlertCell *cell = [MTAlertCell cellWithTableView:tableView];
-    cell.alertobj = [self modelForIndexPath:indexPath];
+    SHDiaLogCell *cell = [SHDiaLogCell cellWithTableView:tableView];
+    cell.diaLogObj = [self modelForIndexPath:indexPath];
     return cell;
 
 }
 
 #pragma mark - delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.tableDidselect) {
-        self.tableDidselect([self modelForIndexPath:indexPath]);
-    }
 
-    [self tableHidden];
+    
 }
 
 #pragma mark - model handler
-- (MTAlertObj *)modelForIndexPath:(NSIndexPath *)indexPath {
+- (SHDigLogObj *)modelForIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row < self.tableDataSource.count) {
         return self.tableDataSource[indexPath.row];
     }
@@ -92,7 +91,7 @@
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.mas_left).offset(30.0f);
             make.right.mas_equalTo(self.mas_right).offset(-30.0f);
-            make.height.mas_equalTo(self.tableDataSource.count * kMTAlertCellHeight);
+            make.height.mas_equalTo(self.tableDataSource.count * 3);
             make.centerX.mas_equalTo(self.mas_centerX);
             make.centerY.mas_equalTo(self.mas_centerY);
         }];
@@ -111,7 +110,7 @@
     return _maskView;
 }
 
-- (NSArray<MTAlertObj *> *)tableDataSource {
+- (NSArray<SHDigLogObj *> *)tableDataSource {
     if (!_tableDataSource) {
         _tableDataSource = [NSArray array];
     }
@@ -128,5 +127,5 @@
 - (void)tableHidden {
     [self removeFromSuperview];
 }
-@end
 
+@end

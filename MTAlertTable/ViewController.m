@@ -33,6 +33,7 @@
         obj.phoneNumber = [NSString stringWithFormat:@"133 7777 998%ld",index];
         [mu addObject:obj];
     }
+//    MTAlertTable *c = [[MTAlertTable alloc] initWithFrame:<#(CGRect)#>]
 
     MTAlertTable *alertTable = [[MTAlertTable alloc] initWithTableDataSource:mu];
     alertTable.tableDidselect = ^(MTAlertObj *obj) {

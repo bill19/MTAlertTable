@@ -1,5 +1,5 @@
 //
-//  MTAlertTable.h
+//  SHDiaLog.h
 //  MTAlertTable
 //
 //  Created by HaoSun on 2018/5/15.
@@ -7,13 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class MTAlertObj;
+@class SHDigLogObj;
 
-typedef void (^AlertTableDidSelect) (MTAlertObj *obj);
+@interface SHDiaLog : UIView
 
-@interface MTAlertTable : UIView
-
-@property(nonatomic, copy) AlertTableDidSelect tableDidselect;
 
 /**
  创建方法
@@ -21,7 +18,7 @@ typedef void (^AlertTableDidSelect) (MTAlertObj *obj);
  @param tableDataSource 数据原信息
  @return self
  */
-- (instancetype)initWithTableDataSource:(NSArray <MTAlertObj *>*)tableDataSource NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithTableDataSource:(NSArray <SHDigLogObj *>*)tableDataSource NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init NS_UNAVAILABLE;
 

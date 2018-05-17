@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D23682920ABC438005452D4 /* SHDigTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23682820ABC438005452D4 /* SHDigTextCell.m */; };
+		6D23682F20ABC9F2005452D4 /* SHButtonConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23682E20ABC9F2005452D4 /* SHButtonConfig.m */; };
 		6D7D06A420AAAD1D00C7C486 /* MTAlertObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06A320AAAD1D00C7C486 /* MTAlertObj.m */; };
 		6D7D06A720AAAD3E00C7C486 /* MTAlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06A620AAAD3E00C7C486 /* MTAlertCell.m */; };
+		6D7D06AB20AAE41700C7C486 /* SHDiaLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06AA20AAE41700C7C486 /* SHDiaLog.m */; };
+		6D7D06AE20AAE48D00C7C486 /* SHDigLogObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06AD20AAE48D00C7C486 /* SHDigLogObj.m */; };
+		6D7D06B120AAE4B600C7C486 /* SHDigLogConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06B020AAE4B600C7C486 /* SHDigLogConfig.m */; };
+		6D7D06B720AAE61D00C7C486 /* SHDiaLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06B620AAE61D00C7C486 /* SHDiaLogCell.m */; };
 		6DA691C720AAABC100341D11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691C620AAABC100341D11 /* AppDelegate.m */; };
 		6DA691CA20AAABC100341D11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691C920AAABC100341D11 /* ViewController.m */; };
 		6DA691CD20AAABC100341D11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA691CB20AAABC100341D11 /* Main.storyboard */; };
@@ -42,10 +48,22 @@
 /* Begin PBXFileReference section */
 		4565704251EC64A201435AAB /* Pods-MTAlertTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTAlertTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTAlertTable/Pods-MTAlertTable.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCE633115C7BB19AA7A88F4 /* Pods-MTAlertTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTAlertTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTAlertTable/Pods-MTAlertTable.release.xcconfig"; sourceTree = "<group>"; };
+		6D23682720ABC438005452D4 /* SHDigTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDigTextCell.h; sourceTree = "<group>"; };
+		6D23682820ABC438005452D4 /* SHDigTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDigTextCell.m; sourceTree = "<group>"; };
+		6D23682D20ABC9F2005452D4 /* SHButtonConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHButtonConfig.h; sourceTree = "<group>"; };
+		6D23682E20ABC9F2005452D4 /* SHButtonConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHButtonConfig.m; sourceTree = "<group>"; };
 		6D7D06A220AAAD1D00C7C486 /* MTAlertObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAlertObj.h; sourceTree = "<group>"; };
 		6D7D06A320AAAD1D00C7C486 /* MTAlertObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAlertObj.m; sourceTree = "<group>"; };
 		6D7D06A520AAAD3E00C7C486 /* MTAlertCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAlertCell.h; sourceTree = "<group>"; };
 		6D7D06A620AAAD3E00C7C486 /* MTAlertCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAlertCell.m; sourceTree = "<group>"; };
+		6D7D06A920AAE41700C7C486 /* SHDiaLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDiaLog.h; sourceTree = "<group>"; };
+		6D7D06AA20AAE41700C7C486 /* SHDiaLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDiaLog.m; sourceTree = "<group>"; };
+		6D7D06AC20AAE48D00C7C486 /* SHDigLogObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDigLogObj.h; sourceTree = "<group>"; };
+		6D7D06AD20AAE48D00C7C486 /* SHDigLogObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDigLogObj.m; sourceTree = "<group>"; };
+		6D7D06AF20AAE4B600C7C486 /* SHDigLogConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDigLogConfig.h; sourceTree = "<group>"; };
+		6D7D06B020AAE4B600C7C486 /* SHDigLogConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDigLogConfig.m; sourceTree = "<group>"; };
+		6D7D06B520AAE61D00C7C486 /* SHDiaLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDiaLogCell.h; sourceTree = "<group>"; };
+		6D7D06B620AAE61D00C7C486 /* SHDiaLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDiaLogCell.m; sourceTree = "<group>"; };
 		6DA691C220AAABC100341D11 /* MTAlertTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTAlertTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA691C520AAABC100341D11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6DA691C620AAABC100341D11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +120,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6D7D06A820AAE3D900C7C486 /* DiaLog */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D06A920AAE41700C7C486 /* SHDiaLog.h */,
+				6D7D06AA20AAE41700C7C486 /* SHDiaLog.m */,
+				6D7D06AC20AAE48D00C7C486 /* SHDigLogObj.h */,
+				6D7D06AD20AAE48D00C7C486 /* SHDigLogObj.m */,
+				6D23682D20ABC9F2005452D4 /* SHButtonConfig.h */,
+				6D23682E20ABC9F2005452D4 /* SHButtonConfig.m */,
+				6D7D06AF20AAE4B600C7C486 /* SHDigLogConfig.h */,
+				6D7D06B020AAE4B600C7C486 /* SHDigLogConfig.m */,
+				6D7D06B520AAE61D00C7C486 /* SHDiaLogCell.h */,
+				6D7D06B620AAE61D00C7C486 /* SHDiaLogCell.m */,
+				6D23682720ABC438005452D4 /* SHDigTextCell.h */,
+				6D23682820ABC438005452D4 /* SHDigTextCell.m */,
+			);
+			path = DiaLog;
+			sourceTree = "<group>";
+		};
 		6DA691B920AAABC100341D11 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +164,7 @@
 		6DA691C420AAABC100341D11 /* MTAlertTable */ = {
 			isa = PBXGroup;
 			children = (
+				6D7D06A820AAE3D900C7C486 /* DiaLog */,
 				6DA691FA20AAABD500341D11 /* ShowTableView */,
 				6DA691C520AAABC100341D11 /* AppDelegate.h */,
 				6DA691C620AAABC100341D11 /* AppDelegate.m */,
@@ -334,10 +372,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7D06B720AAE61D00C7C486 /* SHDiaLogCell.m in Sources */,
+				6D7D06B120AAE4B600C7C486 /* SHDigLogConfig.m in Sources */,
+				6D7D06AB20AAE41700C7C486 /* SHDiaLog.m in Sources */,
 				6DA691D020AAABC100341D11 /* MTAlertTable.xcdatamodeld in Sources */,
 				6DA691CA20AAABC100341D11 /* ViewController.m in Sources */,
+				6D23682920ABC438005452D4 /* SHDigTextCell.m in Sources */,
 				6DA691D820AAABC200341D11 /* main.m in Sources */,
 				6DA691C720AAABC100341D11 /* AppDelegate.m in Sources */,
+				6D7D06AE20AAE48D00C7C486 /* SHDigLogObj.m in Sources */,
+				6D23682F20ABC9F2005452D4 /* SHButtonConfig.m in Sources */,
 				6DA6920020AAAC0C00341D11 /* MTAlertTable.m in Sources */,
 				6D7D06A420AAAD1D00C7C486 /* MTAlertObj.m in Sources */,
 				6D7D06A720AAAD3E00C7C486 /* MTAlertCell.m in Sources */,
