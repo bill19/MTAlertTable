@@ -8,6 +8,7 @@
 
 #import "SHDiaLog.h"
 #import "SHDiaLogCell.h"
+#import "SHDiaButtonCell.h"
 #import "SHDigLogObj.h"
 #import "Masonry.h"
 
@@ -27,7 +28,9 @@
         self.tableDataSource = tableDataSource;
         self.frame = [UIApplication sharedApplication].keyWindow.bounds;
         [self addSubview:self.maskView];
-        [self.tableView registerClass:[SHDiaLog class] forCellReuseIdentifier:@"SHDiaLog"];
+        [self.tableView registerClass:[SHDiaLogCell class] forCellReuseIdentifier:@"SHDiaLogCell"];
+        [self.tableView registerClass:[SHDiaButtonCell class] forCellReuseIdentifier:@"SHDiaButtonCell"];
+
     }
     return self;
 }
@@ -38,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.tableDataSource.count;
+    return self.tableDataSource.count + 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -46,10 +49,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SHDiaLogCell *cell = [SHDiaLogCell cellWithTableView:tableView];
-    cell.diaLogObj = [self modelForIndexPath:indexPath];
-    return cell;
 
+    if (indexPath.row == self.tableDataSource.count) {
+        SHDiaButtonCell *buttonCell = [SHDiaButtonCell cellWithTableView:tableView];
+        return buttonCell;
+    }
+    
+    SHDiaLogCell *cell = [SHDiaLogCell cellWithTableView:tableView];
+    cell.digLogObj = [self modelForIndexPath:indexPath];
+    return cell;
 }
 
 #pragma mark - delegate
@@ -91,7 +99,7 @@
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.mas_left).offset(30.0f);
             make.right.mas_equalTo(self.mas_right).offset(-30.0f);
-            make.height.mas_equalTo(self.tableDataSource.count * 3);
+            make.height.mas_equalTo((self.tableDataSource.count + 1) * kSHDiaLogCellHeight);
             make.centerX.mas_equalTo(self.mas_centerX);
             make.centerY.mas_equalTo(self.mas_centerY);
         }];

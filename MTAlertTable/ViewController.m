@@ -12,6 +12,8 @@
 #import "SHPopView.h"
 #import "SHPopModel.h"
 #import "SHDrawTriangle.h"
+#import "SHDiaLog.h"
+#import "SHDigLogObj.h"
 @interface ViewController ()
 @property (nonatomic, weak) UIButton *button;
 @end
@@ -29,7 +31,20 @@
     _button = button;
 }
 - (void)btnClick {
-    [self popModels];
+    [self diaLog];
+}
+
+- (void)diaLog {
+    NSMutableArray *mu = [NSMutableArray array];
+    for (NSInteger index = 0; index < 4; index++) {
+        SHDigLogObj *obj = [SHDigLogObj new];
+        obj.ID = [NSString stringWithFormat:@"%ld",index];
+        obj.text = @"名字";
+        [mu addObject:obj];
+    }
+    SHDiaLog *alertTable = [[SHDiaLog alloc] initWithTableDataSource:mu];
+    [alertTable tableShow];
+
 }
 
 - (void)popModels {
@@ -48,6 +63,7 @@
     };
     [alertTable tableShowOnView:_button];
 }
+
 
 - (void)alertModels {
     NSMutableArray *mu = [NSMutableArray array];

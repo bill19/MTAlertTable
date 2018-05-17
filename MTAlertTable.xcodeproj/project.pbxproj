@@ -7,19 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D23682920ABC438005452D4 /* SHDigTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23682820ABC438005452D4 /* SHDigTextCell.m */; };
 		6D23682F20ABC9F2005452D4 /* SHButtonConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23682E20ABC9F2005452D4 /* SHButtonConfig.m */; };
 		6D7D06A420AAAD1D00C7C486 /* MTAlertObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06A320AAAD1D00C7C486 /* MTAlertObj.m */; };
 		6D7D06A720AAAD3E00C7C486 /* MTAlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06A620AAAD3E00C7C486 /* MTAlertCell.m */; };
 		6D7D06AB20AAE41700C7C486 /* SHDiaLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06AA20AAE41700C7C486 /* SHDiaLog.m */; };
 		6D7D06AE20AAE48D00C7C486 /* SHDigLogObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06AD20AAE48D00C7C486 /* SHDigLogObj.m */; };
-		6D7D06B120AAE4B600C7C486 /* SHDigLogConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06B020AAE4B600C7C486 /* SHDigLogConfig.m */; };
 		6D7D06B720AAE61D00C7C486 /* SHDiaLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D06B620AAE61D00C7C486 /* SHDiaLogCell.m */; };
 		6D9FEC9320AD1BDD004A8416 /* SHPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9220AD1BDD004A8416 /* SHPopView.m */; };
 		6D9FEC9620AD1CB2004A8416 /* SHPopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9520AD1CB2004A8416 /* SHPopCell.m */; };
 		6D9FEC9920AD1CC5004A8416 /* SHPopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9820AD1CC5004A8416 /* SHPopModel.m */; };
 		6D9FEC9D20AD33A0004A8416 /* SHDrawTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9C20AD33A0004A8416 /* SHDrawTriangle.m */; };
 		6D9FEC9F20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D9FEC9E20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png */; };
+		6D9FECA220AD5993004A8416 /* SHDiaButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FECA120AD5993004A8416 /* SHDiaButtonCell.m */; };
 		6DA691C720AAABC100341D11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691C620AAABC100341D11 /* AppDelegate.m */; };
 		6DA691CA20AAABC100341D11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691C920AAABC100341D11 /* ViewController.m */; };
 		6DA691CD20AAABC100341D11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA691CB20AAABC100341D11 /* Main.storyboard */; };
@@ -53,8 +52,6 @@
 /* Begin PBXFileReference section */
 		4565704251EC64A201435AAB /* Pods-MTAlertTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTAlertTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTAlertTable/Pods-MTAlertTable.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCE633115C7BB19AA7A88F4 /* Pods-MTAlertTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTAlertTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTAlertTable/Pods-MTAlertTable.release.xcconfig"; sourceTree = "<group>"; };
-		6D23682720ABC438005452D4 /* SHDigTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDigTextCell.h; sourceTree = "<group>"; };
-		6D23682820ABC438005452D4 /* SHDigTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDigTextCell.m; sourceTree = "<group>"; };
 		6D23682D20ABC9F2005452D4 /* SHButtonConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHButtonConfig.h; sourceTree = "<group>"; };
 		6D23682E20ABC9F2005452D4 /* SHButtonConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHButtonConfig.m; sourceTree = "<group>"; };
 		6D7D06A220AAAD1D00C7C486 /* MTAlertObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAlertObj.h; sourceTree = "<group>"; };
@@ -65,8 +62,6 @@
 		6D7D06AA20AAE41700C7C486 /* SHDiaLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDiaLog.m; sourceTree = "<group>"; };
 		6D7D06AC20AAE48D00C7C486 /* SHDigLogObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDigLogObj.h; sourceTree = "<group>"; };
 		6D7D06AD20AAE48D00C7C486 /* SHDigLogObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDigLogObj.m; sourceTree = "<group>"; };
-		6D7D06AF20AAE4B600C7C486 /* SHDigLogConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDigLogConfig.h; sourceTree = "<group>"; };
-		6D7D06B020AAE4B600C7C486 /* SHDigLogConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDigLogConfig.m; sourceTree = "<group>"; };
 		6D7D06B520AAE61D00C7C486 /* SHDiaLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDiaLogCell.h; sourceTree = "<group>"; };
 		6D7D06B620AAE61D00C7C486 /* SHDiaLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDiaLogCell.m; sourceTree = "<group>"; };
 		6D9FEC9120AD1BDD004A8416 /* SHPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPopView.h; sourceTree = "<group>"; };
@@ -78,6 +73,8 @@
 		6D9FEC9B20AD33A0004A8416 /* SHDrawTriangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDrawTriangle.h; sourceTree = "<group>"; };
 		6D9FEC9C20AD33A0004A8416 /* SHDrawTriangle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDrawTriangle.m; sourceTree = "<group>"; };
 		6D9FEC9E20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png"; sourceTree = "<group>"; };
+		6D9FECA020AD5993004A8416 /* SHDiaButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDiaButtonCell.h; sourceTree = "<group>"; };
+		6D9FECA120AD5993004A8416 /* SHDiaButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDiaButtonCell.m; sourceTree = "<group>"; };
 		6DA691C220AAABC100341D11 /* MTAlertTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTAlertTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA691C520AAABC100341D11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6DA691C620AAABC100341D11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,12 +140,10 @@
 				6D7D06AD20AAE48D00C7C486 /* SHDigLogObj.m */,
 				6D23682D20ABC9F2005452D4 /* SHButtonConfig.h */,
 				6D23682E20ABC9F2005452D4 /* SHButtonConfig.m */,
-				6D7D06AF20AAE4B600C7C486 /* SHDigLogConfig.h */,
-				6D7D06B020AAE4B600C7C486 /* SHDigLogConfig.m */,
 				6D7D06B520AAE61D00C7C486 /* SHDiaLogCell.h */,
 				6D7D06B620AAE61D00C7C486 /* SHDiaLogCell.m */,
-				6D23682720ABC438005452D4 /* SHDigTextCell.h */,
-				6D23682820ABC438005452D4 /* SHDigTextCell.m */,
+				6D9FECA020AD5993004A8416 /* SHDiaButtonCell.h */,
+				6D9FECA120AD5993004A8416 /* SHDiaButtonCell.m */,
 			);
 			path = DiaLog;
 			sourceTree = "<group>";
@@ -413,13 +408,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7D06B720AAE61D00C7C486 /* SHDiaLogCell.m in Sources */,
-				6D7D06B120AAE4B600C7C486 /* SHDigLogConfig.m in Sources */,
+				6D9FECA220AD5993004A8416 /* SHDiaButtonCell.m in Sources */,
 				6D9FEC9920AD1CC5004A8416 /* SHPopModel.m in Sources */,
 				6D7D06AB20AAE41700C7C486 /* SHDiaLog.m in Sources */,
 				6DA691D020AAABC100341D11 /* MTAlertTable.xcdatamodeld in Sources */,
 				6DA691CA20AAABC100341D11 /* ViewController.m in Sources */,
 				6D9FEC9D20AD33A0004A8416 /* SHDrawTriangle.m in Sources */,
-				6D23682920ABC438005452D4 /* SHDigTextCell.m in Sources */,
 				6DA691D820AAABC200341D11 /* main.m in Sources */,
 				6DA691C720AAABC100341D11 /* AppDelegate.m in Sources */,
 				6D7D06AE20AAE48D00C7C486 /* SHDigLogObj.m in Sources */,

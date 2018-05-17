@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SHDigLogObj.h"
+
+static CGFloat const kSHDiaLogCellHeight = 38.0f;
+
 @interface SHDiaLogCell : UITableViewCell
 
 /*创建TableviewCell**/
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 
-@property (nonatomic, strong) SHDigLogObj *diaLogObj;
-
+@property (nonatomic, strong) SHDigLogObj *digLogObj;
 @end
