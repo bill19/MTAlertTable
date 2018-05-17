@@ -39,7 +39,20 @@
     for (NSInteger index = 0; index < 4; index++) {
         SHDigLogObj *obj = [SHDigLogObj new];
         obj.ID = [NSString stringWithFormat:@"%ld",index];
-        obj.text = @"名字";
+        switch (index) {
+            case 0:
+            {
+                obj.text = @"标题";
+            }
+                break;
+            case 1:
+            {
+                obj.text = @"内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容";
+            }
+                break;
+            default:
+                break;
+        }
         [mu addObject:obj];
     }
     SHDiaLog *alertTable = [[SHDiaLog alloc] initWithTableDataSource:mu];
