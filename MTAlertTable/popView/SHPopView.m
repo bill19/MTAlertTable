@@ -95,7 +95,7 @@ static CGFloat const kTriangleH = 15.0f;
         tableView.bounces = NO;
         [self addSubview:tableView];
         _tableView = tableView;
-        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(120.0f);
             make.height.mas_equalTo(self.tableDataSource.count * kPopCellHeight);
         }];
@@ -159,6 +159,7 @@ static CGFloat const kTriangleH = 15.0f;
         make.top.mas_equalTo(self.drawTriangleView.mas_bottom);
         make.centerX.mas_equalTo(self.drawTriangleView.mas_centerX);
     }];
+
     [[UIApplication sharedApplication].keyWindow addSubview:self];
 }
 

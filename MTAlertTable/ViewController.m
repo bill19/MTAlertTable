@@ -14,6 +14,8 @@
 #import "SHDrawTriangle.h"
 #import "SHDiaLog.h"
 #import "SHDigLogObj.h"
+#import "SHAnimate.h"
+
 @interface ViewController ()
 @property (nonatomic, weak) UIButton *button;
 @end
@@ -31,7 +33,10 @@
     _button = button;
 }
 - (void)btnClick {
-    [self diaLog];
+//    [self diaLog];
+    [self popModels];
+//    [SHAnimate up_animateForView:view];
+
 }
 
 - (void)diaLog {

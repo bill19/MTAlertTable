@@ -29,6 +29,7 @@
 		6DA691E220AAABC200341D11 /* MTAlertTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691E120AAABC200341D11 /* MTAlertTableTests.m */; };
 		6DA691ED20AAABC200341D11 /* MTAlertTableUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691EC20AAABC200341D11 /* MTAlertTableUITests.m */; };
 		6DA6920020AAAC0C00341D11 /* MTAlertTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA691FF20AAAC0C00341D11 /* MTAlertTable.m */; };
+		6DD742AA20B253F80054A861 /* SHAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD742A920B253F80054A861 /* SHAnimate.m */; };
 		BB552ABFEE9B08B0FB304108 /* libPods-MTAlertTable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A174D3037DECF53C9B53A4F9 /* libPods-MTAlertTable.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,8 @@
 		6DA691EE20AAABC200341D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DA691FE20AAAC0C00341D11 /* MTAlertTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAlertTable.h; sourceTree = "<group>"; };
 		6DA691FF20AAAC0C00341D11 /* MTAlertTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAlertTable.m; sourceTree = "<group>"; };
+		6DD742A820B253F80054A861 /* SHAnimate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAnimate.h; sourceTree = "<group>"; };
+		6DD742A920B253F80054A861 /* SHAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHAnimate.m; sourceTree = "<group>"; };
 		A174D3037DECF53C9B53A4F9 /* libPods-MTAlertTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTAlertTable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -196,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				6D9FEC9E20AD51F7004A8416 /* Simulator Screen Shot - iPhone 8 Plus - 2018-05-17 at 14.00.00.png */,
+				6DD742A720B253E40054A861 /* SHAnimate */,
+				6DD742A620B251B80054A861 /* DropDownList */,
 				6D9FEC9A20AD338D004A8416 /* DrawkTriangle */,
 				6D9FEC9020AD1BCA004A8416 /* popView */,
 				6D7D06A820AAE3D900C7C486 /* DiaLog */,
@@ -243,6 +248,22 @@
 				6D7D06A620AAAD3E00C7C486 /* MTAlertCell.m */,
 			);
 			path = ShowTableView;
+			sourceTree = "<group>";
+		};
+		6DD742A620B251B80054A861 /* DropDownList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DropDownList;
+			sourceTree = "<group>";
+		};
+		6DD742A720B253E40054A861 /* SHAnimate */ = {
+			isa = PBXGroup;
+			children = (
+				6DD742A820B253F80054A861 /* SHAnimate.h */,
+				6DD742A920B253F80054A861 /* SHAnimate.m */,
+			);
+			path = SHAnimate;
 			sourceTree = "<group>";
 		};
 		F47BD00D6B74AE3987CAA7FF /* Pods */ = {
@@ -409,6 +430,7 @@
 			files = (
 				6D7D06B720AAE61D00C7C486 /* SHDiaLogCell.m in Sources */,
 				6D9FECA220AD5993004A8416 /* SHDiaButtonCell.m in Sources */,
+				6DD742AA20B253F80054A861 /* SHAnimate.m in Sources */,
 				6D9FEC9920AD1CC5004A8416 /* SHPopModel.m in Sources */,
 				6D7D06AB20AAE41700C7C486 /* SHDiaLog.m in Sources */,
 				6DA691D020AAABC100341D11 /* MTAlertTable.xcdatamodeld in Sources */,
