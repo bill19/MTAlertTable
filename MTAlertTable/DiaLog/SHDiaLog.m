@@ -11,13 +11,13 @@
 #import "SHDiaButtonCell.h"
 #import "SHDigLogObj.h"
 #import "Masonry.h"
-
+static CGFloat const kPadding = 30.0f;
 @interface SHDiaLog () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UIView *maskView;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray <SHDigLogObj *>*tableDataSource;
-
+@property (nonatomic, assign) CGFloat tableHeight;
 @end
 
 @implementation SHDiaLog
@@ -25,6 +25,7 @@
 - (instancetype)initWithTableDataSource:(NSArray <SHDigLogObj *>*)tableDataSource {
     self = [super initWithFrame:CGRectZero];
     if (self) {
+
         self.tableDataSource = tableDataSource;
         self.frame = [UIApplication sharedApplication].keyWindow.bounds;
         [self addSubview:self.maskView];
@@ -97,8 +98,8 @@
         [self addSubview:tableView];
         _tableView = tableView;
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.mas_left).offset(30.0f);
-            make.right.mas_equalTo(self.mas_right).offset(-30.0f);
+            make.left.mas_equalTo(self.mas_left).offset(kPadding);
+            make.right.mas_equalTo(self.mas_right).offset(-kPadding);
             make.height.mas_equalTo((self.tableDataSource.count + 1) * kSHDiaLogCellHeight);
             make.centerX.mas_equalTo(self.mas_centerX);
             make.centerY.mas_equalTo(self.mas_centerY);
@@ -135,5 +136,6 @@
 - (void)tableHidden {
     [self removeFromSuperview];
 }
+
 
 @end

@@ -47,6 +47,7 @@
     diaTextLabel.textAlignment = NSTextAlignmentCenter;
     diaTextLabel.textColor = [UIColor blackColor];
     diaTextLabel.font = [UIFont systemFontOfSize:14.0f];
+    diaTextLabel.numberOfLines = 0;
     _diaTextLabel = diaTextLabel;
     [self.contentView addSubview:_diaTextLabel];
 
@@ -69,5 +70,6 @@
     _diaTextLabel.textAlignment = _digLogObj.textAligment;
     _diaTextLabel.textColor = _digLogObj.color;
     _diaTextLabel.font = _digLogObj.font;
+
 }
 @end

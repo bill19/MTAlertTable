@@ -33,8 +33,8 @@
     _button = button;
 }
 - (void)btnClick {
-//    [self diaLog];
-    [self popModels];
+    [self diaLog];
+//    [self popModels];
 //    [SHAnimate up_animateForView:view];
 
 }
